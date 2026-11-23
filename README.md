@@ -6,7 +6,7 @@ da imobiliária, mostra como o valor mensal foi formado, apresenta a taxa contra
 aluguel e gera um arquivo **CSV com a projeção dos 12 primeiros meses**.
 
 Trabalho da disciplina *Algorithmic Thinking & Introduction to Object-Oriented Programming*
-Autoria: **Livia Nunez**.
+Autoria: **Yuri Nascimento**.
 
 ---
 
@@ -39,7 +39,7 @@ Autoria: **Livia Nunez**.
 
 1. Baixe o projeto (botão **Code → Download ZIP** no GitHub) ou clone o repositório:
    ```bash
-   git clone https://github.com/livi4i/RentSmart.git
+   git clone https://github.com/yuri460/RentSmart.git
    cd RentSmart
    ```
 2. Execute o programa na pasta do projeto:
