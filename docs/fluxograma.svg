@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 1380" width="780" height="1380" font-family="'Segoe UI', Arial, Helvetica, sans-serif">
+  <title>Fluxograma do RentSmart</title>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .term{fill:#0b4f8a}
+      .term-t{fill:#ffffff;font-weight:600}
+      .io{fill:#e3f0fd;stroke:#2563a8;stroke-width:1.6}
+      .proc{fill:#f4f6f9;stroke:#4b5563;stroke-width:1.6}
+      .dec{fill:#fff4d6;stroke:#b7791f;stroke-width:1.6}
+      .loop{fill:#e7f6ec;stroke:#2f855a;stroke-width:1.6}
+      .t{font-size:15px;fill:#0f172a;text-anchor:middle;dominant-baseline:central}
+      .s{font-size:13px}
+      .lbl{font-size:13px;fill:#334155;font-weight:700;dominant-baseline:central}
+      .ln{fill:none;stroke:#334155;stroke-width:1.6}
+      .arr{marker-end:url(#seta)}
+      .val{fill:#2f855a;font-weight:700}
+      .leg{font-size:12.5px;fill:#0f172a;dominant-baseline:central}
+    </style>
+  </defs>
+  <rect width="780" height="1380" fill="#ffffff"/>
+
+  <!-- Legenda -->
+  <rect x="590" y="10" width="180" height="194" rx="6" fill="#fafbfc" stroke="#cbd5e1"/>
+  <text x="602" y="28" class="leg" font-weight="700">Legenda</text>
+  <rect x="602" y="42" width="34" height="16" rx="8" class="term"/>
+  <text x="646" y="50" class="leg">Início / fim</text>
+  <polygon points="607,66 637,66 632,82 602,82" class="io"/>
+  <text x="646" y="74" class="leg">Entrada / saída</text>
+  <rect x="602" y="90" width="34" height="16" class="proc"/>
+  <text x="646" y="98" class="leg">Processamento</text>
+  <polygon points="619,113 637,122 619,131 601,122" class="dec"/>
+  <text x="646" y="122" class="leg">Decisão</text>
+  <polygon points="607,138 631,138 637,146 631,154 607,154 601,146" class="loop"/>
+  <text x="646" y="146" class="leg">Repetição (laço)</text>
+  <text x="619" y="172" class="leg val" text-anchor="middle" font-size="16">↺</text>
+  <text x="646" y="172" class="leg">Entrada validada</text>
+  <text x="646" y="190" class="leg" fill="#64748b">(rotina da Figura 2)</text>
+
+  <!-- Início -->
+  <rect x="315" y="12" width="150" height="40" rx="20" class="term"/>
+  <text x="390" y="32" class="t term-t">Início</text>
+  <line x1="390" y1="52" x2="390" y2="70" class="ln arr"/>
+
+  <!-- Nome do cliente -->
+  <polygon points="274,70 520,70 506,112 260,112" class="io"/>
+  <text x="390" y="91" class="t">Ler nome do cliente <tspan class="val">↺</tspan></text>
+  <line x1="390" y1="112" x2="390" y2="130" class="ln arr"/>
+
+  <!-- Tipo de imóvel -->
+  <polygon points="239,130 555,130 541,186 225,186" class="io"/>
+  <text x="390" y="148" class="t">Ler tipo de imóvel <tspan class="val">↺</tspan></text>
+  <text x="390" y="170" class="t s">1 Apartamento · 2 Casa · 3 Estúdio</text>
+  <line x1="390" y1="186" x2="390" y2="204" class="ln arr"/>
+
+  <polygon points="390,204 495,240 390,276 285,240" class="dec"/>
+  <text x="390" y="240" class="t">Tipo de imóvel?</text>
+
+  <!-- Ramo Apartamento / Casa -->
+  <polyline points="285,240 200,240 200,292" class="ln arr"/>
+  <text x="279" y="226" class="lbl" text-anchor="end">Apartamento ou Casa</text>
+
+  <polygon points="79,292 335,292 321,334 65,334" class="io"/>
+  <text x="200" y="313" class="t">Ler nº de quartos (1 ou 2) <tspan class="val">↺</tspan></text>
+  <line x1="200" y1="334" x2="200" y2="350" class="ln arr"/>
+
+  <polygon points="79,350 335,350 321,392 65,392" class="io"/>
+  <text x="200" y="371" class="t">Ler vaga de garagem (s/n) <tspan class="val">↺</tspan></text>
+  <line x1="200" y1="392" x2="200" y2="410" class="ln arr"/>
+
+  <polygon points="200,410 295,442 200,474 105,442" class="dec"/>
+  <text x="200" y="442" class="t">É apartamento?</text>
+  <line x1="200" y1="474" x2="200" y2="492" class="ln arr"/>
+  <text x="208" y="483" class="lbl">Sim</text>
+
+  <polygon points="79,492 335,492 321,534 65,534" class="io"/>
+  <text x="200" y="513" class="t">Ler se possui crianças (s/n) <tspan class="val">↺</tspan></text>
+  <line x1="200" y1="534" x2="200" y2="570" class="ln"/>
+
+  <polyline points="295,442 355,442 355,570" class="ln"/>
+  <text x="302" y="430" class="lbl">Não</text>
+
+  <!-- Ramo Estúdio -->
+  <polyline points="495,240 600,240 600,292" class="ln arr"/>
+  <text x="501" y="226" class="lbl">Estúdio</text>
+
+  <polygon points="459,292 755,292 741,334 445,334" class="io"/>
+  <text x="600" y="313" class="t">Ler pacote de estacionamento <tspan class="val">↺</tspan></text>
+  <line x1="600" y1="334" x2="600" y2="350" class="ln arr"/>
+
+  <polygon points="600,350 710,382 600,414 490,382" class="dec"/>
+  <text x="600" y="382" class="t">Contratou o pacote?</text>
+  <line x1="600" y1="414" x2="600" y2="432" class="ln arr"/>
+  <text x="608" y="423" class="lbl">Sim</text>
+
+  <polygon points="464,432 750,432 736,474 450,474" class="io"/>
+  <text x="600" y="453" class="t">Ler vagas adicionais (0 a 10) <tspan class="val">↺</tspan></text>
+  <line x1="600" y1="474" x2="600" y2="570" class="ln"/>
+
+  <polyline points="710,382 762,382 762,520 602,520" class="ln arr"/>
+  <text x="716" y="370" class="lbl">Não</text>
+
+  <!-- Junção dos ramos -->
+  <line x1="200" y1="570" x2="600" y2="570" class="ln"/>
+  <line x1="390" y1="570" x2="390" y2="590" class="ln arr"/>
+
+  <!-- Taxa contratual -->
+  <polygon points="234,590 560,590 546,632 220,632" class="io"/>
+  <text x="390" y="611" class="t">Ler nº de parcelas da taxa (1 a 5) <tspan class="val">↺</tspan></text>
+  <line x1="390" y1="632" x2="390" y2="650" class="ln arr"/>
+
+  <!-- Processamento -->
+  <rect x="170" y="650" width="440" height="56" class="proc"/>
+  <text x="390" y="668" class="t">Criar os objetos: Apartamento, Casa ou Estúdio,</text>
+  <text x="390" y="689" class="t">TaxaContratual e Orcamento</text>
+  <line x1="390" y1="706" x2="390" y2="724" class="ln arr"/>
+
+  <rect x="170" y="724" width="440" height="56" class="proc"/>
+  <text x="390" y="742" class="t">subtotal = aluguel-base + adicionais</text>
+  <text x="390" y="763" class="t s">(2º quarto, vaga de garagem ou estacionamento)</text>
+  <line x1="390" y1="780" x2="390" y2="798" class="ln arr"/>
+
+  <polygon points="390,798 515,836 390,874 265,836" class="dec"/>
+  <text x="390" y="826" class="t">Apartamento e</text>
+  <text x="390" y="846" class="t">sem crianças?</text>
+
+  <line x1="515" y1="836" x2="560" y2="836" class="ln arr"/>
+  <text x="537" y="822" class="lbl" text-anchor="middle">Sim</text>
+  <rect x="560" y="811" width="190" height="50" class="proc"/>
+  <text x="655" y="827" class="t">desconto = 5%</text>
+  <text x="655" y="847" class="t">do subtotal</text>
+  <polyline points="655,861 655,892 392,892" class="ln arr"/>
+
+  <line x1="390" y1="874" x2="390" y2="910" class="ln arr"/>
+  <text x="382" y="884" class="lbl" text-anchor="end">Não</text>
+
+  <rect x="170" y="910" width="440" height="46" class="proc"/>
+  <text x="390" y="933" class="t">aluguel mensal = subtotal − desconto (se houver)</text>
+  <line x1="390" y1="956" x2="390" y2="974" class="ln arr"/>
+
+  <rect x="170" y="974" width="440" height="56" class="proc"/>
+  <text x="390" y="992" class="t">Dividir a taxa de R$ 2.000,00 em n parcelas</text>
+  <text x="390" y="1013" class="t s">(a última parcela ajusta a diferença de centavos)</text>
+  <line x1="390" y1="1030" x2="390" y2="1048" class="ln arr"/>
+
+  <polygon points="180,1048 600,1048 620,1076 600,1104 180,1104 160,1076" class="loop"/>
+  <text x="390" y="1066" class="t">Para cada mês de 1 a 12:</text>
+  <text x="390" y="1087" class="t">total = aluguel + parcela da taxa (se mês ≤ n)</text>
+  <line x1="390" y1="1104" x2="390" y2="1122" class="ln arr"/>
+
+  <!-- Saídas -->
+  <polygon points="204,1122 590,1122 576,1164 190,1164" class="io"/>
+  <text x="390" y="1143" class="t">Exibir resumo detalhado do orçamento</text>
+  <line x1="390" y1="1164" x2="390" y2="1182" class="ln arr"/>
+
+  <polygon points="204,1182 590,1182 576,1224 190,1224" class="io"/>
+  <text x="390" y="1203" class="t">Gravar CSV com a projeção de 12 meses</text>
+  <line x1="390" y1="1224" x2="390" y2="1242" class="ln arr"/>
+
+  <polygon points="390,1242 495,1274 390,1306 285,1274" class="dec"/>
+  <text x="390" y="1274" class="t">Novo orçamento?</text>
+
+  <polyline points="285,1274 22,1274 22,91 265,91" class="ln arr"/>
+  <text x="278" y="1262" class="lbl" text-anchor="end">Sim</text>
+
+  <line x1="390" y1="1306" x2="390" y2="1326" class="ln arr"/>
+  <text x="398" y="1316" class="lbl">Não</text>
+
+  <rect x="315" y="1326" width="150" height="40" rx="20" class="term"/>
+  <text x="390" y="1346" class="t term-t">Fim</text>
+</svg>

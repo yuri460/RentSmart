@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1240" width="900" height="1240" font-family="'Segoe UI', Arial, Helvetica, sans-serif">
+  <title>Diagrama de classes do RentSmart</title>
+  <defs>
+    <marker id="aberta" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M1,1 L11,6 L1,11" fill="none" stroke="#334155" stroke-width="1.6"/>
+    </marker>
+    <style>
+      .box{fill:#ffffff;stroke:#2563a8;stroke-width:1.5}
+      .head{fill:#e3f0fd}
+      .div{stroke:#2563a8;stroke-width:1}
+      .nome{font-size:15px;font-weight:700;fill:#0b3a66;text-anchor:middle;dominant-baseline:central}
+      .abs{font-style:italic}
+      .est{font-size:12px;fill:#475569;text-anchor:middle;dominant-baseline:central}
+      .m{font-family:Consolas,'Cascadia Mono','Courier New',monospace;font-size:13px;fill:#0f172a;dominant-baseline:central}
+      .i{font-style:italic}
+      .ln{fill:none;stroke:#334155;stroke-width:1.6}
+      .tracejada{stroke-dasharray:6 4}
+      .aberta{marker-end:url(#aberta)}
+      .heranca{fill:#ffffff;stroke:#334155;stroke-width:1.6}
+      .comp{fill:#334155;stroke:#334155;stroke-width:1.2}
+      .rot{font-size:12.5px;fill:#334155;font-weight:600;text-anchor:middle}
+      .mult{font-size:12.5px;fill:#334155;font-weight:700}
+      .legt{font-size:12.5px;fill:#0f172a;dominant-baseline:central}
+    </style>
+  </defs>
+  <rect width="900" height="1240" fill="#ffffff"/>
+    <line x1="310" y1="60" x2="610" y2="60" class="ln aberta"/>
+  <text x="460.0" y="50" class="rot">exportador</text>
+  <text x="602" y="76" class="mult" text-anchor="end">1</text>
+  <line x1="290" y1="264" x2="290" y2="320" class="ln tracejada aberta"/>
+  <text x="298" y="296.0" class="rot" style="text-anchor:start">«cria»</text>
+  <line x1="680" y1="145" x2="545" y2="320" class="ln tracejada aberta"/>
+  <text x="634.5" y="236.5" class="rot" style="text-anchor:start">«lê»</text>
+  <polygon points="580,365 589,358 598,365 589,372" class="comp"/>
+  <line x1="598" y1="365" x2="615" y2="365" class="ln"/>
+  <text x="611" y="357" class="mult" text-anchor="end">1</text>
+  <line x1="270" y1="390" x2="215" y2="390" class="ln tracejada aberta"/>
+  <text x="242.5" y="380" class="rot">«gera»</text>
+  <text x="231" y="407" class="mult" text-anchor="start">12</text>
+  <polygon points="425.0,489 432.0,498 425.0,507 418.0,498" class="comp"/>
+  <line x1="425.0" y1="507" x2="425.0" y2="550" class="ln"/>
+  <text x="433.0" y="542" class="mult" text-anchor="start">1</text>
+  <line x1="585" y1="640" x2="650" y2="640" class="ln tracejada aberta"/>
+  <text x="617.5" y="630" class="rot">«gera»</text>
+  <polygon points="425.0,750 416.0,765 434.0,765" class="heranca"/>
+  <polyline points="425.0,765 425.0,780" class="ln"/>
+  <polyline points="170.0,810 170.0,780 735.0,780 735.0,810" class="ln"/>
+  <polygon points="170.0,993 161.0,1008 179.0,1008" class="heranca"/>
+  <polyline points="170.0,1008 170.0,1033" class="ln"/>
+  <polyline points="170.0,1060 170.0,1033 485.0,1033 485.0,1060" class="ln"/>
+    <g>
+  <rect x="10" y="10" width="300" height="254" class="box"/>
+  <rect x="10" y="10" width="300" height="30" class="head"/>
+  <rect x="10" y="10" width="300" height="254" class="box" fill="none"/>
+  <text x="160.0" y="26" class="nome">InterfaceConsole</text>
+  <line x1="10" y1="40" x2="310" y2="40" class="div"/>
+  <text x="20" y="53" class="m">+ exportador: ExportadorCSV</text>
+  <text x="20" y="70" class="m">- _ler: função de entrada</text>
+  <text x="20" y="87" class="m">- _escrever: função de saída</text>
+  <line x1="10" y1="101" x2="310" y2="101" class="div"/>
+  <text x="20" y="114" class="m">+ executar()</text>
+  <text x="20" y="131" class="m">+ coletar_orcamento(): Orcamento</text>
+  <text x="20" y="148" class="m">+ exibir_orcamento(orcamento)</text>
+  <text x="20" y="165" class="m">- _coletar_imovel(): Imovel</text>
+  <text x="20" y="182" class="m">- _coletar_apartamento|casa|estudio()</text>
+  <text x="20" y="199" class="m">- _ler_nome(msg): str</text>
+  <text x="20" y="216" class="m">- _ler_inteiro(msg, min, max): int</text>
+  <text x="20" y="233" class="m">- _ler_sim_nao(msg): bool</text>
+  <text x="20" y="250" class="m">- _ler_opcao(msg, opcoes): str</text>
+  </g>
+  <g>
+  <rect x="610" y="10" width="280" height="135" class="box"/>
+  <rect x="610" y="10" width="280" height="30" class="head"/>
+  <rect x="610" y="10" width="280" height="135" class="box" fill="none"/>
+  <text x="750.0" y="26" class="nome">ExportadorCSV</text>
+  <line x1="610" y1="40" x2="890" y2="40" class="div"/>
+  <text x="620" y="53" class="m">+ CABECALHO: tuple</text>
+  <text x="620" y="70" class="m">+ pasta_destino: Path</text>
+  <text x="620" y="87" class="m">+ separador: str = ';'</text>
+  <line x1="610" y1="101" x2="890" y2="101" class="div"/>
+  <text x="620" y="114" class="m">+ exportar(orcamento): Path</text>
+  <text x="620" y="131" class="m">- _gerar_nome_arquivo(cliente): str</text>
+  </g>
+  <g>
+  <rect x="10" y="320" width="205" height="153" class="box"/>
+  <rect x="10" y="320" width="205" height="44" class="head"/>
+  <rect x="10" y="320" width="205" height="153" class="box" fill="none"/>
+  <text x="112.5" y="334" class="est">«dataclass»</text>
+  <text x="112.5" y="352" class="nome">ProjecaoMensal</text>
+  <line x1="10" y1="364" x2="215" y2="364" class="div"/>
+  <text x="20" y="377" class="m">+ mes: int</text>
+  <text x="20" y="394" class="m">+ aluguel: Decimal</text>
+  <text x="20" y="411" class="m">+ parcela_taxa: Decimal</text>
+  <text x="20" y="428" class="m">+ total_mes: Decimal</text>
+  <text x="20" y="445" class="m">+ total_acumulado: Decimal</text>
+  <line x1="10" y1="459" x2="215" y2="459" class="div"/>
+  </g>
+  <g>
+  <rect x="270" y="320" width="310" height="169" class="box"/>
+  <rect x="270" y="320" width="310" height="30" class="head"/>
+  <rect x="270" y="320" width="310" height="169" class="box" fill="none"/>
+  <text x="425.0" y="336" class="nome">Orcamento</text>
+  <line x1="270" y1="350" x2="580" y2="350" class="div"/>
+  <text x="280" y="363" class="m">+ MESES_PROJECAO = 12</text>
+  <text x="280" y="380" class="m">+ cliente: str</text>
+  <text x="280" y="397" class="m">+ imovel: Imovel</text>
+  <text x="280" y="414" class="m">+ taxa_contratual: TaxaContratual</text>
+  <line x1="270" y1="428" x2="580" y2="428" class="div"/>
+  <text x="280" y="441" class="m">+ aluguel_mensal: Decimal «property»</text>
+  <text x="280" y="458" class="m">+ gerar_projecao(): list[ProjecaoMensal]</text>
+  <text x="280" y="475" class="m">+ calcular_total_primeiro_ano(): Decimal</text>
+  </g>
+  <g>
+  <rect x="615" y="320" width="275" height="152" class="box"/>
+  <rect x="615" y="320" width="275" height="30" class="head"/>
+  <rect x="615" y="320" width="275" height="152" class="box" fill="none"/>
+  <text x="752.5" y="336" class="nome">TaxaContratual</text>
+  <line x1="615" y1="350" x2="890" y2="350" class="div"/>
+  <text x="625" y="363" class="m">+ VALOR_TOTAL = 2000.00</text>
+  <text x="625" y="380" class="m">+ MAXIMO_PARCELAS = 5</text>
+  <text x="625" y="397" class="m">+ numero_parcelas: int</text>
+  <line x1="615" y1="411" x2="890" y2="411" class="div"/>
+  <text x="625" y="424" class="m">+ calcular_parcelas(): list[Decimal]</text>
+  <text x="625" y="441" class="m">+ valor_parcela_no_mes(mes): Decimal</text>
+  <text x="625" y="458" class="m">+ descricao_parcelamento(): str</text>
+  </g>
+  <g>
+  <rect x="265" y="550" width="320" height="200" class="box"/>
+  <rect x="265" y="550" width="320" height="44" class="head"/>
+  <rect x="265" y="550" width="320" height="200" class="box" fill="none"/>
+  <text x="425.0" y="564" class="est">«abstrata»</text>
+  <text x="425.0" y="582" class="nome abs">Imovel</text>
+  <line x1="265" y1="594" x2="585" y2="594" class="div"/>
+  <text x="275" y="607" class="m">+ NOME: str</text>
+  <text x="275" y="624" class="m">+ ALUGUEL_BASE: Decimal</text>
+  <line x1="265" y1="638" x2="585" y2="638" class="div"/>
+  <text x="275" y="651" class="m i">+ descricao(): str</text>
+  <text x="275" y="668" class="m i">+ listar_adicionais(): list[ItemOrcamento]</text>
+  <text x="275" y="685" class="m">+ listar_descontos(): list[ItemOrcamento]</text>
+  <text x="275" y="702" class="m">+ item_aluguel_base(): ItemOrcamento</text>
+  <text x="275" y="719" class="m">+ calcular_subtotal(): Decimal</text>
+  <text x="275" y="736" class="m">+ calcular_aluguel_mensal(): Decimal</text>
+  </g>
+  <g>
+  <rect x="650" y="590" width="200" height="102" class="box"/>
+  <rect x="650" y="590" width="200" height="44" class="head"/>
+  <rect x="650" y="590" width="200" height="102" class="box" fill="none"/>
+  <text x="750.0" y="604" class="est">«dataclass»</text>
+  <text x="750.0" y="622" class="nome">ItemOrcamento</text>
+  <line x1="650" y1="634" x2="850" y2="634" class="div"/>
+  <text x="660" y="647" class="m">+ descricao: str</text>
+  <text x="660" y="664" class="m">+ valor: Decimal</text>
+  <line x1="650" y1="678" x2="850" y2="678" class="div"/>
+  </g>
+  <g>
+  <rect x="10" y="810" width="320" height="183" class="box"/>
+  <rect x="10" y="810" width="320" height="44" class="head"/>
+  <rect x="10" y="810" width="320" height="183" class="box" fill="none"/>
+  <text x="170.0" y="824" class="est">«classe-base»</text>
+  <text x="170.0" y="842" class="nome">ImovelComQuartos</text>
+  <line x1="10" y1="854" x2="330" y2="854" class="div"/>
+  <text x="20" y="867" class="m">+ QUARTOS_PERMITIDOS = (1, 2)</text>
+  <text x="20" y="884" class="m">+ VALOR_VAGA_GARAGEM = 300.00</text>
+  <text x="20" y="901" class="m">+ ADICIONAL_SEGUNDO_QUARTO: Decimal</text>
+  <text x="20" y="918" class="m">+ quartos: int</text>
+  <text x="20" y="935" class="m">+ possui_garagem: bool</text>
+  <line x1="10" y1="949" x2="330" y2="949" class="div"/>
+  <text x="20" y="962" class="m">+ listar_adicionais(): list[ItemOrcamento]</text>
+  <text x="20" y="979" class="m">+ descricao(): str</text>
+  </g>
+  <g>
+  <rect x="575" y="810" width="320" height="220" class="box"/>
+  <rect x="575" y="810" width="320" height="30" class="head"/>
+  <rect x="575" y="810" width="320" height="220" class="box" fill="none"/>
+  <text x="735.0" y="826" class="nome">Estudio</text>
+  <line x1="575" y1="840" x2="895" y2="840" class="div"/>
+  <text x="585" y="853" class="m">+ NOME = 'Estúdio'</text>
+  <text x="585" y="870" class="m">+ ALUGUEL_BASE = 1200.00</text>
+  <text x="585" y="887" class="m">+ VALOR_PACOTE_ESTACIONAMENTO = 250.00</text>
+  <text x="585" y="904" class="m">+ VAGAS_NO_PACOTE = 2</text>
+  <text x="585" y="921" class="m">+ VALOR_VAGA_ADICIONAL = 60.00</text>
+  <text x="585" y="938" class="m">+ possui_pacote_estacionamento: bool</text>
+  <text x="585" y="955" class="m">+ vagas_adicionais: int</text>
+  <line x1="575" y1="969" x2="895" y2="969" class="div"/>
+  <text x="585" y="982" class="m">+ total_vagas: int «property»</text>
+  <text x="585" y="999" class="m">+ listar_adicionais(): list[ItemOrcamento]</text>
+  <text x="585" y="1016" class="m">+ descricao(): str</text>
+  </g>
+  <g>
+  <rect x="10" y="1060" width="320" height="169" class="box"/>
+  <rect x="10" y="1060" width="320" height="30" class="head"/>
+  <rect x="10" y="1060" width="320" height="169" class="box" fill="none"/>
+  <text x="170.0" y="1076" class="nome">Apartamento</text>
+  <line x1="10" y1="1090" x2="330" y2="1090" class="div"/>
+  <text x="20" y="1103" class="m">+ NOME = 'Apartamento'</text>
+  <text x="20" y="1120" class="m">+ ALUGUEL_BASE = 700.00</text>
+  <text x="20" y="1137" class="m">+ ADICIONAL_SEGUNDO_QUARTO = 200.00</text>
+  <text x="20" y="1154" class="m">+ PERCENTUAL_DESCONTO_SEM_CRIANCAS = 0.05</text>
+  <text x="20" y="1171" class="m">+ possui_criancas: bool</text>
+  <line x1="10" y1="1185" x2="330" y2="1185" class="div"/>
+  <text x="20" y="1198" class="m">+ listar_descontos(): list[ItemOrcamento]</text>
+  <text x="20" y="1215" class="m">+ descricao(): str</text>
+  </g>
+  <g>
+  <rect x="350" y="1060" width="270" height="105" class="box"/>
+  <rect x="350" y="1060" width="270" height="30" class="head"/>
+  <rect x="350" y="1060" width="270" height="105" class="box" fill="none"/>
+  <text x="485.0" y="1076" class="nome">Casa</text>
+  <line x1="350" y1="1090" x2="620" y2="1090" class="div"/>
+  <text x="360" y="1103" class="m">+ NOME = 'Casa'</text>
+  <text x="360" y="1120" class="m">+ ALUGUEL_BASE = 900.00</text>
+  <text x="360" y="1137" class="m">+ ADICIONAL_SEGUNDO_QUARTO = 250.00</text>
+  <line x1="350" y1="1151" x2="620" y2="1151" class="div"/>
+  </g>
+    <rect x="650" y="1070" width="240" height="160" rx="6" fill="#fafbfc" stroke="#cbd5e1"/>
+  <text x="662" y="1088" class="legt" font-weight="700">Legenda</text>
+  <line x1="662" y1="1110" x2="702" y2="1110" class="ln"/>
+  <polygon points="708,1110 696,1103 696,1117" class="heranca"/>
+  <text x="720" y="1110" class="legt">Herança (é um)</text>
+  <polygon points="662,1132 671,1125 680,1132 671,1139" class="comp"/>
+  <line x1="680" y1="1132" x2="708" y2="1132" class="ln"/>
+  <text x="720" y="1132" class="legt">Composição (tem um)</text>
+  <line x1="662" y1="1154" x2="708" y2="1154" class="ln aberta"/>
+  <text x="720" y="1154" class="legt">Associação</text>
+  <line x1="662" y1="1176" x2="708" y2="1176" class="ln tracejada aberta"/>
+  <text x="720" y="1176" class="legt">Dependência (cria / usa)</text>
+  <text x="662" y="1198" class="legt">+ público   - uso interno ( _ )</text>
+  <text x="662" y="1218" class="legt"><tspan font-style="italic">itálico</tspan> = abstrato</text>
+</svg>
